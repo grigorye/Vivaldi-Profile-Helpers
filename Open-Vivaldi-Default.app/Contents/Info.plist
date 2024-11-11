@@ -182,11 +182,11 @@
 	<key>CFBundleIconFile</key>
 	<string>applet</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.grigorye.Open-Web-Personal</string>
+	<string>com.grigorye.Open-Vivaldi-Default</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Open-Web-Personal</string>
+	<string>Open-Vivaldi-Default</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleSignature</key>
@@ -280,7 +280,7 @@
 		<key>positionOfDivider</key>
 		<real>658</real>
 		<key>savedFrame</key>
-		<string>184 52 1680 787 0 0 2048 839 </string>
+		<string>0 52 1680 893 0 0 1680 945 </string>
 		<key>selectedTab</key>
 		<string>result</string>
 	</dict>

@@ -182,11 +182,11 @@
 	<key>CFBundleIconFile</key>
 	<string>applet</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.grigorye.Open-Web-Adevinta</string>
+	<string>com.grigorye.Open-Vivaldi-Profile-1</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Open-Web-Adevinta</string>
+	<string>Open-Vivaldi-Profile-1</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -270,9 +270,9 @@
 	<key>WindowState</key>
 	<dict>
 		<key>bundleDividerCollapsed</key>
-		<false/>
+		<true/>
 		<key>bundlePositionOfDivider</key>
-		<real>1749</real>
+		<real>0.0</real>
 		<key>dividerCollapsed</key>
 		<false/>
 		<key>eventLogLevel</key>
@@ -282,7 +282,7 @@
 		<key>positionOfDivider</key>
 		<real>552</real>
 		<key>savedFrame</key>
-		<string>0 52 2048 787 0 0 2048 839 </string>
+		<string>0 105 1680 787 0 0 1680 945 </string>
 		<key>selectedTab</key>
 		<string>result</string>
 	</dict>
