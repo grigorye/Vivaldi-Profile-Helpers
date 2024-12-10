@@ -1,0 +1,28 @@
+#! /bin/bash
+
+set -x
+set -euo pipefail
+
+tmpdir=$(mktemp -d /tmp/Open-Web-Profile.XXXXXX)
+
+for profile_name in Personal Adevinta; do
+    app="$HOME/Applications/Open-Web-Profile-${profile_name}.app"
+    bundle_name="Open-Web-${profile_name}"
+    bundle_id="com.grigorye.Open-Web-${profile_name}"
+
+    rm -r "$app" || true
+    cat Profile-${profile_name}.applescript Open-Web-Profile-Template.applescript \
+        | osacompile -o "$app"
+    appInfo="$app/Contents/Info.plist"
+    templateInfo="Info-URLViewer.plist"
+
+    for entry in CFBundleDocumentTypes CFBundleURLTypes; do
+        genInfo="$tmpdir/genInfo-entry.plist"
+        /usr/libexec/PlistBuddy -x -c "Print $entry" "$templateInfo" > "$genInfo"
+        /usr/libexec/PlistBuddy -c "Add $entry array" "$appInfo" || true
+        /usr/libexec/PlistBuddy -c "Merge $genInfo $entry" "$appInfo"
+    done
+
+    defaults write "$appInfo" CFBundleIdentifier "$bundle_id"
+    defaults write "$appInfo" CFBundleName "$bundle_name"
+done
