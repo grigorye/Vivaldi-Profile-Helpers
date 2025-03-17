@@ -3,7 +3,7 @@ on openWithChrome(arg)
 end openWithChrome
 
 on openWithVivaldi(arg)
-	do shell script "~/Applications/Vivaldi.app/Contents/MacOS/Vivaldi --profile-directory='" & vivaldiProfile & "' " & arg
+	do shell script "/Applications/Vivaldi.app/Contents/MacOS/Vivaldi --profile-directory='" & vivaldiProfile & "' " & arg
 end openWithVivaldi
 
 on openX(arg)
